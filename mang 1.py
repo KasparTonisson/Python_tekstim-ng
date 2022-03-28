@@ -10,7 +10,7 @@ KoristajaKaspar = [150,5,5,10,5,15]
 while True:
     print("1. Prill Peedu: Health: ",PrillPeedu[0],"; rünnak 1:",PrillPeedu[1],"; rünnak 2:",PrillPeedu[2],"-",PrillPeedu[3],"; rünnak 3:",PrillPeedu[4],"-",PrillPeedu[5])
     print("2. Isand Sten: Health: ",IsandSten[0],"; rünnak 1:",IsandSten[1],"; rünnak 2:",IsandSten[2],"-",IsandSten[3],"; rünnak 3:",IsandSten[4],"-",IsandSten[5])
-    print("3. Healer: Health: ",KoristajaKaspar[0],"; rünnak 1:",KoristajaKaspar[1],"; rünnak 2:",KoristajaKaspar[2],"-",KoristajaKaspar[3],"; rünnak 3:",KoristajaKaspar[4],"-",KoristajaKaspar[5])
+    print("3. Koristaja Kaspar : Health: ",KoristajaKaspar[0],"; rünnak 1:",KoristajaKaspar[1],"; rünnak 2:",KoristajaKaspar[2],"-",KoristajaKaspar[3],"; rünnak 3:",KoristajaKaspar[4],"-",KoristajaKaspar[5])
     user = input("\nSelect your class: 1, 2, or 3: ")
     if user == "1":
         user = PrillPeedu
