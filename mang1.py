@@ -1,9 +1,16 @@
-import random 
+import random
+
+print("KOLM AUTISTI")
+algus = int(input("1. ALUSTA MÄNGU 2. LOAD 3. EXIT "))
+if algus == 3:
+    exit()
+elif algus == 2:
+    
 
 print("Mäng")
-user_name = input("Pange oma karakteri nimi: ")
 
-PrillPeedu = [100,10,5,18,0,17] 
+
+PrillPeedu = [100,10,5,18,8,25] 
 IsandSten = [100,7,5,23,10,23] 
 KoristajaKaspar = [100,7,2,25,8,30]
 tase= 1
@@ -51,15 +58,15 @@ while True:
         if ply_move == "1":
             ply_dmg = user[1]
             ai[0] = ai[0]- ply_dmg
-            print(user_name," tegi",ply_dmg,"valu!")
+            print("Sa tegid",ply_dmg,"valu!")
         elif ply_move == "2":
             ply_dmg = random.randint(user[2],user[3])
             ai[0] = ai[0]- ply_dmg
-            print(user_name," tegi",ply_dmg,"valu!")
+            print("Sa tegid",ply_dmg,"valu!")
         elif ply_move == "3":
             ply_dmg = random.randint(user[4],user[5])
             ai[0] = ai[0]- ply_dmg
-            print(user_name," tegi",ply_dmg,"valu!")
+            print("Sa tegid",ply_dmg,"valu!")
         else:
             print("Valige üks käikudest.")
             continue
@@ -98,7 +105,7 @@ while True:
             print("Sa võitsid vastase!:)")
             print(f"Tase {tase} on läbitud.")
             tase += 1
-            upgrade = int(input("1. +3 DAMAGE 2. +10 HP"))
+            upgrade = int(input("1. +3 DAMAGE 2. +10 HP "))
             if upgrade == 1:
                 
                 user[0]=elud
@@ -130,5 +137,3 @@ while True:
             
                 
             break
-    
-        
