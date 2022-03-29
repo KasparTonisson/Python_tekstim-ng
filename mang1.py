@@ -3,15 +3,17 @@ import random
 print("Mäng")
 user_name = input("Pange oma karakteri nimi: ")
 
-PrillPeedu = [100,100,5,15,0,25] 
-IsandSten = [50,15,10,20,5,25] 
-KoristajaKaspar = [150,5,5,10,5,15]
+PrillPeedu = [100,10,5,18,0,17] 
+IsandSten = [100,7,5,23,10,23] 
+KoristajaKaspar = [100,7,2,25,8,30]
 tase= 1
+elud= 100
+aielud=100
 
 while True:
-    print("1. Prill Peedu: Health: ",PrillPeedu[0],"; rünnak 1:",PrillPeedu[1],"; rünnak 2:",PrillPeedu[2],"-",PrillPeedu[3],"; rünnak 3:",PrillPeedu[4],"-",PrillPeedu[5])
-    print("2. Isand Sten: Health: ",IsandSten[0],"; rünnak 1:",IsandSten[1],"; rünnak 2:",IsandSten[2],"-",IsandSten[3],"; rünnak 3:",IsandSten[4],"-",IsandSten[5])
-    print("3. Koristaja Kaspar : Health: ",KoristajaKaspar[0],"; rünnak 1:",KoristajaKaspar[1],"; rünnak 2:",KoristajaKaspar[2],"-",KoristajaKaspar[3],"; rünnak 3:",KoristajaKaspar[4],"-",KoristajaKaspar[5])
+    print("1. Prill Peedu: Health: ",PrillPeedu[0],"; Õrn löök:",PrillPeedu[1],"; Uppercut:",PrillPeedu[2],"-",PrillPeedu[3],"; Fly kick:",PrillPeedu[4],"-",PrillPeedu[5])
+    print("2. Isand Sten: Health: ",IsandSten[0],"; Õrn löök:",IsandSten[1],"; Uppercut:",IsandSten[2],"-",IsandSten[3],"; Fly Kick:",IsandSten[4],"-",IsandSten[5])
+    print("3. Koristaja Kaspar : Health: ",KoristajaKaspar[0],"; Õrn löök:",KoristajaKaspar[1],"; Uppercut:",KoristajaKaspar[2],"-",KoristajaKaspar[3],"; Fly kick:",KoristajaKaspar[4],"-",KoristajaKaspar[5])
     user = input("\nSelect your class: 1, 2, or 3: ")
     if user == "1":
         user = PrillPeedu
@@ -45,7 +47,7 @@ while True:
     while True:
         print("\nSul on:",user[0],"elu")
         print("Su vastasel on",ai[0],"elu")
-        ply_move = input("\nKas sa soovid rünnak (1), rünnak (2)või rünnak (3)?")
+        ply_move = input("\nKas sa soovid Õrn löök (1), Uppercut (2)või Fly kick(3)?")
         if ply_move == "1":
             ply_dmg = user[1]
             ai[0] = ai[0]- ply_dmg
@@ -85,9 +87,9 @@ while True:
             print()
             print(f"Te jõudsite {tase}. tasemeni!")
             print("GAME OVER")
-            valik = int(input("1. START OVER (F5) 2. EXIT: "))
+            valik = int(input("1. EXIT: "))
             
-            if valik == 2:
+            if valik == 1:
                 exit()
             break
         
@@ -96,28 +98,33 @@ while True:
             print("Sa võitsid vastase!:)")
             print(f"Tase {tase} on läbitud.")
             tase += 1
-            user[0]=100
             upgrade = int(input("1. +3 DAMAGE 2. +10 HP"))
             if upgrade == 1:
-                user[0]=100
+                
+                user[0]=elud
                 user[1] += 3
                 user[2] += 3
                 user[3] += 3
                 
-                ai[0]=100
-                ai[0]+=10
+                
+                aielud+=7
+                ai[0]=aielud
                 ai[1] += 1
                 ai[2] += 1
                 ai[3] += 1
             else:
-                user[0]+=10
-                ai[0]+=15 
+                elud += 10
+                user[0]=elud
+                aielud+=15
+                ai[0]=aielud
                 
-            print(f"Algab tase {tase} .")
+                
+            
             valik1 = int(input("1. CONTINUE 2. SAVE AND EXIT 3. SAVE: "))
             
             if valik1 == 1:
-                
+                print()
+                print(f"Algab tase {tase} .")
                 
                 continue
             
