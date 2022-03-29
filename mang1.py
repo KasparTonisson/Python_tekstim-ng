@@ -1,13 +1,26 @@
 import random
 
+
+        
+
+
 print("KOLM AUTISTI")
-algus = int(input("1. ALUSTA MÄNGU 2. LOAD 3. EXIT "))
-if algus == 3:
+algus = int(input("1. ALUSTA MÄNGU 2. LOAD 3. EXIT 4.SECRET LEVEL"))
+print()
+if algus == 4:
+    print("NOT AVAILABLE IN FREE VERSION")
+    print("TO PLAY SECRET VERSION BUY THE xD DLC FOR 29,99€")
+    int(input("ENTER YOUR SOCIAL SECURITY NUMBER HERE: "))
+    input("ENTER YOUR CREDIT CARD NUMBERS (both sides)")
+    
     exit()
-elif algus == 2:
+    #KUNAGI TULEB SAVE
+elif algus == 3:
+    exit()
+
     
 
-print("Mäng")
+
 
 
 PrillPeedu = [100,10,5,18,8,25] 
@@ -86,8 +99,7 @@ while True:
             print("Sulle tehti",ai_dmg,"valu!")
            
           
-        print("\nSul on:",user[0],"elu")
-        print("Su vastasel on",ai[0],"elu")
+       
         
         if user[0]<=0:
             print("Sa Kaotasid! :(")
@@ -106,34 +118,31 @@ while True:
             print(f"Tase {tase} on läbitud.")
             tase += 1
             upgrade = int(input("1. +3 DAMAGE 2. +10 HP "))
-            if upgrade == 1:
+            while True:
+                upgrade = int(input("1. +3 DAMAGE 2. +10 HP "))
+                if upgrade == 1:
+                    
+                    user[0]=elud
+                    user[1] += 3
+                    user[2] += 3
+                    user[3] += 3
                 
-                user[0]=elud
-                user[1] += 3
-                user[2] += 3
-                user[3] += 3
-                
-                
-                aielud+=7
-                ai[0]=aielud
-                ai[1] += 1
-                ai[2] += 1
-                ai[3] += 1
-            else:
-                elud += 10
-                user[0]=elud
-                aielud+=15
-                ai[0]=aielud
-                
-                
-            
-            valik1 = int(input("1. CONTINUE 2. SAVE AND EXIT 3. SAVE: "))
-            
-            if valik1 == 1:
-                print()
-                print(f"Algab tase {tase} .")
-                
-                continue
-            
-                
-            break
+                    
+                    aielud+=7
+                    ai[0]=aielud
+                    ai[1] += 1
+                    ai[2] += 1
+                    ai[3] += 1
+                    break
+                elif upgrade == 2:
+                    elud += 10
+                    user[0]=elud
+                    aielud+=15
+                    ai[0]=aielud
+                    ai[1] += 1
+                    ai[2] += 1
+                    ai[3] += 1
+                    break
+                else:
+                    
+                    continue
