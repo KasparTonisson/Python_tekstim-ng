@@ -1,26 +1,33 @@
 import random
-
-print("                        KOLM AUTISTI")
-print("")
+print()
 print("Mängu tegid: Peedu Erik Pajo, Kaspar Tõnisson ja Sten Veski")
+print()
+print("                        KOLM AUTISTI")
+print()
+
+print("                      MAJOR PATCH 1.01")
+print()
+print("                Isand Sten sai damage nerfi")
+
 print("")
-algus = int(input("1. ALUSTA MÄNGU 2. LOAD 3. EXIT 4.SECRET LEVEL"))
+algus = int(input("1. ALUSTA MÄNGU 2. LOAD 3. EXIT 4.SECRET LEVEL "))
 print()
 if algus == 4:
     print("NOT AVAILABLE IN FREE VERSION")
     print("TO PLAY SECRET VERSION BUY THE xD DLC FOR 29,99€")
     int(input("ENTER YOUR SOCIAL SECURITY NUMBER HERE: "))
-    input("ENTER YOUR CREDIT CARD NUMBERS (both sides)")
-    
+    input("ENTER YOUR CREDIT CARD NUMBERS (both sides) ")
     exit()
     #KUNAGI TULEB SAVE
+elif algus == 1:
+    user_name = input("Mis on sinu karakteri nimi? ")
 elif algus == 3:
     exit()
 
     
 
 PrillPeedu = [100,10,5,18,6,25] 
-IsandSten = [100,7,5,23,8,23] 
+IsandSten = [100,0,0,0,8,23] 
 KoristajaKaspar = [100,7,2,25,3,30]
 tase= 1
 elud= 100
@@ -50,20 +57,18 @@ while True:
 print("----------------------- MÄNG ALGAB -----------------------")
 
 while True:
-    ai = [100,10,5,15,0,25] 
+    ai = [100,10,5,15,0,25]
+    aiboss=[200,7,2,12,1,20]
     
     if ai == 1:
         print("\nSu vastasel on",ai[0],"elu!")
-    if ai == 2:
-        print("\nSu vastasel on",ai[0],"elu!")
-    if ai == 3:
-        print("\nSu vastasel on",ai[0],"elu!")
+
     
     
     while True:
         print("\nSul on:",user[0],"elu")
         print("Su vastasel on",ai[0],"elu")
-        ply_move = input("\nKas sa soovid Õrn löök (1), Uppercut (2)või Fly kick(3)?")
+        ply_move = input("\nKas sa soovid Õrn löök (1), Uppercut (2)või Fly kick(3)? ")
         if ply_move == "1":
             ply_dmg = user[1]
             ai[0] = ai[0]- ply_dmg
@@ -93,6 +98,9 @@ while True:
             ai_dmg = random.randint(ai[4],ai[5])
             user[0] = user[0]- ai_dmg
             print("Sulle tehti",ai_dmg,"damaget!")
+        '''
+        if tase == 6:
+           ''' 
            
           
        
@@ -125,14 +133,13 @@ while True:
                     
                     aielud+=7
                     ai[0]=aielud
-                    ai[1] += 1
                     ai[2] += 1
                     ai[3] += 1
                     break
                 elif upgrade == 2:
                     elud += 10
                     user[0]=elud
-                    aielud+=15
+                    aielud+=10
                     ai[0]=aielud
                     ai[1] += 1
                     ai[2] += 1
@@ -141,4 +148,7 @@ while True:
                 else:
                     
                     continue
-                
+def save(user_name):
+    f = open(f"{user_name}.txt","w+", encofing="UTF-8")
+    f.write(f"{user_name}")
+    f.close()
