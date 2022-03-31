@@ -36,9 +36,7 @@ elif algus == 2:
              tase = int(a[1])
              elud = int(a[2])
              aielud = int(a[3])
-             print(a)
-             
-             
+            
              
              
 elif algus == 3:
