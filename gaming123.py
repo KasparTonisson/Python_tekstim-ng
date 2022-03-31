@@ -1,4 +1,6 @@
 import random
+
+#MÄNGUS VAJALIKUD MUUTUJAD
 PrillPeedu = [100,10,5,18,6,25] 
 IsandSten = [100,0,0,0,8,23] 
 KoristajaKaspar = [100,7,2,25,3,30]
@@ -6,18 +8,13 @@ tase= 1
 elud= 100
 aielud=100
 
+#MÄNGU START MENÜÜ
 print()
-print("Mängu tegid: Peedu Erik Pajo, Kaspar Tõnisson ja Sten Veski")
+print("  Mängu tegid: Peedu Erik Pajo, Kaspar Tõnisson ja Sten Veski")
 print()
-print("                        KOLM AUTISTI")
+print("                        3 KALVEVIPOEGA")
 print()
-
-print("                      MAJOR PATCH 1.01")
-print()
-print("                Isand Sten sai damage nerfi")
-
-print("")
-algus = int(input("1. ALUSTA MÄNGU 2. LOAD 3. EXIT 4.SECRET LEVEL "))
+algus = int(input("        1. ALUSTA MÄNGU 2. LOAD 3. EXIT 4.SECRET LEVEL "))
 print()
 if algus == 4:
     print("NOT AVAILABLE IN FREE VERSION")
@@ -25,7 +22,8 @@ if algus == 4:
     int(input("ENTER YOUR SOCIAL SECURITY NUMBER HERE: "))
     input("ENTER YOUR CREDIT CARD NUMBERS (both sides) ")
     exit()
-    #KUNAGI TULEB SAVE
+    
+#SALVESTAMINE
 elif algus == 1:
     user_name = input("Mis on sinu karakteri nimi? ")
 elif algus == 2:
@@ -36,16 +34,11 @@ elif algus == 2:
              tase = int(a[1])
              elud = int(a[2])
              aielud = int(a[3])
-            
-             
-             
+#LAHKUMINE                       
 elif algus == 3:
     exit()
 
-    
-
-
-
+#KARAKTERI VALIMINE
 while True:
     print("1. Prill Peedu: Health: ",PrillPeedu[0],"; Õrn löök:",PrillPeedu[1],"; Uppercut:",PrillPeedu[2],"-",PrillPeedu[3],"; Fly kick:",PrillPeedu[4],"-",PrillPeedu[5])
     print("2. Isand Sten: Health: ",IsandSten[0],"; Õrn löök:",IsandSten[1],"; Uppercut:",IsandSten[2],"-",IsandSten[3],"; Fly Kick:",IsandSten[4],"-",IsandSten[5])
@@ -68,16 +61,16 @@ while True:
         continue
     
 print("----------------------- MÄNG ALGAB -----------------------")
-
+#VASTANE
 while True:
     ai = [100,10,5,15,0,25]
-    aiboss=[200,7,2,12,1,20]
     
+#VASTASE ELUD    
     if ai == 1:
         print("\nSu vastasel on",aielud,"elu!")
 
-    
-    
+#COMBAT
+#SINU LÖÖMINE
     while True:
         print("Sul on:",elud,"elu")
         print("Su vastasel on",aielud,"elu")
@@ -97,23 +90,25 @@ while True:
         else:
             print("Valige üks käikudest.")
             continue
-        
+#VASTASE LÖÖMINE        
         ai_move = random.randint(1,3)
         if ai_move == 1:
             ai_dmg = ai[1]
             elud = elud- ai_dmg
             print("Sulle tehti",ai_dmg,"damaget!")
+            print()
         elif ai_move == 2:
             ai_dmg = random.randint(ai[2],ai[3])
             elud = elud- ai_dmg
             print("Sulle tehti",ai_dmg,"damaget!")
+            print()
         elif ai_move == 3:
             ai_dmg = random.randint(ai[4],ai[5])
             elud = elud- ai_dmg
             print("Sulle tehti",ai_dmg,"damaget!")
-
-               
-        
+            print()
+   
+#MÄNGU KAOTAMINE
         if elud<=0:
             print("Sa Kaotasid! :(")
             print()
@@ -125,18 +120,18 @@ while True:
                 exit()
             break
         
+#MÄNGU VÕITMINE
         elif aielud<=0:
             print()
             print("Sa võitsid vastase!:)")
             print(f"Tase {tase} on läbitud.")
             tase += 1
+            
+#KARAKTERI UUEDAMINE
             while True:
                 upgrade = int(input("1. +3 DAMAGE 2. +10 HP "))
                 
-                
-                        
-                
-                    
+   
                 if upgrade == 1:
                     
                     elud=user[0]
@@ -146,7 +141,7 @@ while True:
                 
                     
                     aielud+=7
-                    ai[0]=aielud
+                    aielud = ai[0]
                     ai[2] += 1
                     ai[3] += 1
                     
@@ -155,14 +150,16 @@ while True:
                     elud=user[0]
                     
                     ai[0]+=10
-                    aielud = user[0]
+                    aielud = ai[0]
                     ai[1] += 1
                     ai[2] += 1
                     ai[3] += 1
                     
-                
+#MÄNGU SALVESTAMINE
                 valik1 = int(input("1. Continue 2.Save 3.Save and exit "))
-                if valik1 == 2:
+                if valik1 == 1:
+                    break
+                elif valik1 == 2:
                     with open(f"SAVE.txt", "w+")as f:
                         f.write(f"{user_name} ")
                         f.write(f"{tase} ")
@@ -174,9 +171,7 @@ while True:
                         f.write(f"{user_name} ")
                         f.write(f"{tase} ")
                         f.write(f"{elud} ")
-                        
                         f.write(f"{aielud} ")
-                        
                         exit()
                         break
                     
