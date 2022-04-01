@@ -20,18 +20,34 @@ print("                        ░╚═══██╗  ██╔═██�
 print("                        ██████╔╝  ██║░╚██╗██║░░██║███████╗███████╗░░╚██╔╝░░██║██║░░░░░╚█████╔╝███████╗╚██████╔╝██║░░██║")
 print("                        ╚═════╝░  ╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝╚══════╝░░░╚═╝░░░╚═╝╚═╝░░░░░░╚════╝░╚══════╝░╚═════╝░╚═╝░░╚═╝")
 print()
-algus = int(input("                                              1. ALUSTA MÄNGU 2. LOAD 3. EXIT 4.SECRET LEVEL "))
+algus = int(input("                                              1. ALUSTA MÄNGU 2. LOAD 3. EXIT 4.xD DLC "))
 print()
 if algus == 4:
     print("NOT AVAILABLE IN FREE VERSION")
     print("TO PLAY SECRET VERSION BUY THE xD DLC FOR 29,99€")
     int(input("ENTER YOUR SOCIAL SECURITY NUMBER HERE: "))
     input("ENTER YOUR CREDIT CARD NUMBERS (both sides) ")
-    exit()
+    print()
+    print("HAHAHAHHAHAHAH GOT YO CREDIT CARD NUMBERS")
+    scam = int(input("1. Rahatagstus 2. Oota kuni DLC tuleb "))
+    if scam == 1:
+        print()
+        print("███████╗██╗")
+        print("██╔════╝██║")
+        print("█████╗░░██║")
+        print("██╔══╝░░██║")
+        print("███████╗██║")
+        print("╚══════╝╚═╝")
+        exit()
+    elif scam == 2:
+        exit()
+    
+    
     
 #SALVESTAMINE
 elif algus == 1:
-    print("3 iidset kangelast läksid rindele. Nende ülesandeks oli leida ja tappa teispoolsuset tulnud pahalased. Teekonnal ületasid nad maad ja mered. Teekond oli väga pikk kuid ilma tulemusteta. Kuid ühel hommikul avastasid nad pahalased omas elemendis, nad olid parasjagu kogu Eesti metsa põlema panemas. Enne kui nad seda teha jõudsid andsid need 3 Kalevipoega neile kõva lahingu. Hiilisid nad neile lähedale ja peksid neid puupalkidega, kuid see ei töötanud, palgid põlesid neid puudutades ära. Neil tekkis uus idee proovida pahalased järve saada. Selleks kulus neil väga palju jõudu ja aega. Tuli pahalasi lüüa korda mööda järve suunas, saades iga kord neid puudutades said nad põletada. Kuid jõudsid nad lõpuks nii kaugele, et nad said pahalased järve, kus nad kustusid ja kaotasid oma võimed")
+    print("3 iidset kangelast läksid rindele.\n\nNende ülesandeks oli leida ja tappa teispoolsuset tulnud pahalased.\nTeekonnal ületasid nad maad ja mered.\nTeekond oli väga pikk kuid ilma tulemusteta.\nKuid ühel hommikul avastasid nad pahalased omas elemendis, nad olid parasjagu kogu Eesti metsa põlema panemas.\nEnne kui nad seda teha jõudsid andsid need 3 Kalevipoega neile kõva lahingu.\nHiilisid nad neile lähedale ja peksid neid puupalkidega, kuid see ei töötanud, palgid põlesid neid puudutades ära.\nNeil tekkis uus idee proovida pahalased järve saada.\nSelleks kulus neil väga palju jõudu ja aega.\nTuli pahalasi lüüa korda mööda järve suunas, saades iga kord neid puudutades said nad põletada.\nKuid jõudsid nad lõpuks nii kaugele, et nad said pahalased järve, kus nad kustusid ja kaotasid oma võimed.")
+    print()
     user_name = input("Mis on sinu karakteri nimi? ")
      
 elif algus == 2:
