@@ -11,11 +11,16 @@ aielud=100
 
 #MÄNGU START MENÜÜ
 print()
-print("  Mängu tegid: Peedu Erik Pajo, Kaspar Tõnisson ja Sten Veski")
+print("                                       Mängu tegid: Peedu Erik Pajo, Kaspar Tõnisson ja Sten Veski")
 print()
-print("                        3 KALVEVIPOEGA")
+print("                        ██████╗░  ██╗░░██╗░█████╗░██╗░░░░░███████╗██╗░░░██╗██╗██████╗░░█████╗░███████╗░██████╗░░█████╗░")
+print("                        ╚════██╗  ██║░██╔╝██╔══██╗██║░░░░░██╔════╝██║░░░██║██║██╔══██╗██╔══██╗██╔════╝██╔════╝░██╔══██╗")
+print("                        ░█████╔╝  █████═╝░███████║██║░░░░░█████╗░░╚██╗░██╔╝██║██████╔╝██║░░██║█████╗░░██║░░██╗░███████║")
+print("                        ░╚═══██╗  ██╔═██╗░██╔══██║██║░░░░░██╔══╝░░░╚████╔╝░██║██╔═══╝░██║░░██║██╔══╝░░██║░░╚██╗██╔══██║")
+print("                        ██████╔╝  ██║░╚██╗██║░░██║███████╗███████╗░░╚██╔╝░░██║██║░░░░░╚█████╔╝███████╗╚██████╔╝██║░░██║")
+print("                        ╚═════╝░  ╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝╚══════╝░░░╚═╝░░░╚═╝╚═╝░░░░░░╚════╝░╚══════╝░╚═════╝░╚═╝░░╚═╝")
 print()
-algus = int(input("        1. ALUSTA MÄNGU 2. LOAD 3. EXIT 4.SECRET LEVEL "))
+algus = int(input("                                              1. ALUSTA MÄNGU 2. LOAD 3. EXIT 4.SECRET LEVEL "))
 print()
 if algus == 4:
     print("NOT AVAILABLE IN FREE VERSION")
