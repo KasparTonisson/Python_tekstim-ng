@@ -51,7 +51,7 @@ elif algus == 1:
     user_name = input("Mis on sinu karakteri nimi? ")
      
 elif algus == 2:
-     with open(f"SAVE.txt", "r")as f:
+     with open(f"SAVE.txt", "r")as f:#KARAKTERI LOADIMINE
          for rida in f:
              a = rida.split(" ")
              user_name = a[0]
@@ -190,11 +190,11 @@ while True:
                     ai[4] += 1
                     ai[5] += 1
                     
-#MÄNGU SALVESTAMINE
+#VÕIDU VALIKUD
                 valik1 = int(input("1. Mängi edasi 2. Mängi edasi ja salvesta 3.Salvesta ja lahku "))
                 if valik1 == 1:
                     break
-                elif valik1 == 2:
+                elif valik1 == 2:#MÄNGU SALVESTAMINE
                     with open(f"SAVE.txt", "w+")as f:
                         f.write(f"{user_name} ")
                         f.write(f"{tase} ")
